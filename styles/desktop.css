@@ -13,3 +13,9 @@
     margin: 0 auto;
   }
   
+  .nav__logo img {
+    display: block;
+    max-height: 45px;
+    width: auto;
+  }
+  
