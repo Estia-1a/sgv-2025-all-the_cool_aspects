@@ -34,6 +34,8 @@
   padding: 0;
 }
 
+
+
 .nav__link {
   position: relative;
   text-decoration: none;
@@ -57,11 +59,17 @@
   transition: width 0.25s ease;
 }
 
+.nav__link.active {
+  color: #6a00ff;                 
+  font-weight: 600;
+  border-bottom: 3px solid #6a00ff;
+}
+
 .nav__link:hover {
   color: #552dfc; 
 }
 
-.nav__link:hover::after {
+.nav__link:not(.active):hover::after {
   width: 100%;
 }
   
