@@ -57,4 +57,22 @@
     font-size: 1.1rem;
     cursor: pointer;
   }
+
+  
+
+  .nav__actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .action svg {
+    display: block;
+    fill: #222;
+    cursor: pointer;
+  }
+  
+  .action:hover svg {
+    fill: #0077cc;
+  }
   
