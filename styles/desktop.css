@@ -103,19 +103,33 @@
 
   
 
-  .nav__actions {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
+ /* ---- ACTIONS (connexion + panier) ---- */
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.action img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.action img:hover {
+  opacity: 0.7;
+}
+
   
-  .action svg {
-    display: block;
-    fill: #222;
-    cursor: pointer;
-  }
+.action svg {
+  display: block;
+  fill: #bebebe;
+  cursor: pointer;
+}
   
-  .action:hover svg {
-    fill: #0077cc;
-  }
+.action:hover svg {
+  fill: #552dfc;
+}
   
