@@ -19,3 +19,23 @@
     width: auto;
   }
   
+  .nav__menu {
+    display: flex;         /* horizontal */
+    gap: 1.5rem;           /* espace entre les items */
+    list-style: none;      /* supprime les puces */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav__link {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    padding: 0.4rem 0.6rem;
+    transition: color 0.2s ease;
+  }
+  
+  .nav__link:hover {
+    color: #0077cc;
+  }
+  
