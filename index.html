@@ -11,19 +11,23 @@
 <body>
     <nav class="site-nav" role="navigation" aria-label="Navigation principale">
         <div class="nav__container">
-            <a href="/" class="nav__logo" aria-label="Accueil">
+
+            <!-- Logo -->
+            <a href="index.html" class="nav__logo" aria-label="Accueil">
                 <img src="media/pictures/logo.png" alt="Nom du site" width="70" height="50">
             </a>
 
+            <!-- Menu -->
             <ul class="nav__menu" role="menu">
-                <li><a href="/" class="nav__link">Accueil</a></li>
-                <li><a href="/categories" class="nav__link">Catégories</a></li>
-                <li><a href="/nouveautes" class="nav__link">Nouveautés</a></li>
-                <li><a href="/contact" class="nav__link">Contact</a></li>
+                <li><a href="index.html" class="nav__link">Accueil</a></li>
+                <li><a href="index.html" class="nav__link">Catégories</a></li>
+                <li><a href="index.html" class="nav__link">Nouveautés</a></li>
+                <li><a href="index.html" class="nav__link">Contact</a></li>
             </ul>
 
+            <!-- Barre de recherche -->
             <div class="nav__search">
-                <form action="/search" method="get" class="search-form">
+                <form action="index.html" method="get" class="search-form">
                     <input type="search" name="q" class="search-input" placeholder="Rechercher..." />
                     <button type="submit" class="search-btn">
                         <img src="media/pictures/recherche.png" alt="Recherche" width="20" height="20">
@@ -31,17 +35,17 @@
                 </form>
             </div>
 
+            <!-- Icônes à droite -->
             <div class="nav__actions">
-                <a href="/login" class="action" aria-label="Connexion">
+                <a href="index.html" class="action" aria-label="Connexion">
                     <svg width="40" height="40" viewBox="0 0 24 24">
                       <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM2 22a10 10 0 0 1 20 0z" />
                     </svg>
-                  </a>
-                  
-                  <a href="/panier" class="action" aria-label="Panier">
+                </a>
+                
+                <a href="index.html" class="action" aria-label="Panier">
                     <img src="media/pictures/panier.png" alt="Panier" width="40" height="40">
-                  </a>
-                  
+                </a>
             </div>
 
         </div>
