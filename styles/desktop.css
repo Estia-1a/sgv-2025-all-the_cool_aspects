@@ -72,6 +72,57 @@
 .nav__link:not(.active):hover::after {
   width: 100%;
 }
+
+
+/* ========================= */
+/*      SOUS-MENU CSS        */
+/* ========================= */
+
+.nav__dropdown {
+  position: relative;
+}
+
+.dropdown__menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #262626;
+  border: 1px solid #b300ff;
+  border-radius: 6px;
+  padding: 0.5rem 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5px);
+  transition: 0.25s ease;
+  min-width: 160px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+}
+
+/* Affichage au survol */
+.nav__dropdown:hover .dropdown__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown__menu li a {
+  display: block;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  color: #fffefe;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Hover sur les sous-options */
+.dropdown__menu li a:hover {
+  background: linear-gradient(90deg, #6a00ff12, #0099ff12);
+  color: #6a00ff;
+}
+
+
   
 /* ---- RECHERCHE ---- */
 .search-form {
