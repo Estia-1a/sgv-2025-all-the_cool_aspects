@@ -206,7 +206,38 @@
 .action:hover svg {
   fill: #552dfc;
 }
-  
+
+/* Tooltips navbar */
+.nav__actions .action {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.nav__actions .action .tooltip {
+  position: absolute;
+  bottom: -60%; /* au-dessus de l’icône */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00000095;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.nav__actions .action:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-5px); /* léger slide up */
+}
+
 
 
 
@@ -282,7 +313,7 @@
   bottom: 125%; /* au-dessus de l’icône */
   left: 50%;
   transform: translateX(-50%);
-  background: #6a00ff;
+  background: #00000095;
   color: #fff;
   padding: 0.25rem 0.5rem;
   font-size: 0.75rem;
