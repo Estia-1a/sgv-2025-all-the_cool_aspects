@@ -441,6 +441,100 @@ html, body {
 
 
 /* ========================= */
+/*    ARTICLES HORIZONTAUX   */
+/* ========================= */
+
+.articles-section {
+  max-width: 1300px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+.articles-section__title {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.articles-row {
+  display: flex;
+  flex-wrap: nowrap;      /* tout sur une ligne */
+  gap: 1.5rem;
+  overflow-x: auto;       /* scroll si trop large */
+  padding: 0 1rem 1rem 1rem;  /* padding à gauche pour que premier article ne touche pas bord */
+  scroll-behavior: smooth;
+}
+
+.articles-row::-webkit-scrollbar {
+  height: 6px;
+}
+
+.articles-row::-webkit-scrollbar-thumb {
+  background: #6a00ff;
+  border-radius: 3px;
+}
+
+.articles-row::-webkit-scrollbar-track {
+  background: #0b0b0b;
+}
+
+/* Carte article */
+.article-card {
+  flex: 0 0 220px;       /* largeur fixe */
+  border-radius: 12px;
+  overflow: hidden;
+  background: #1a1a1a;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  text-decoration: none;  /* supprime le soulignement du lien */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 40px rgba(106, 0, 255, 0.35);
+}
+
+.article-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.article-card:hover img {
+  transform: scale(1.05);
+}
+
+.article-info {
+  padding: 0.6rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.article-info h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+.article-info p {
+  font-size: 0.85rem;
+  margin: 0;
+  color: #bcbcbc;
+}
+
+.article-price {
+  font-weight: 700;
+  color: #6a00ff;
+}
+
+
+
+
+
+/* ========================= */
 /*          Footer           */
 /* ========================= */
 
