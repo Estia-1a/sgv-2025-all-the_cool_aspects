@@ -55,7 +55,7 @@
   bottom: -4px;
   width: 0%;
   height: 2px;
-  background: linear-gradient(90deg, #4a7dfc, #8a3ffc); 
+  background: linear-gradient(90deg, #744afc, #8a3ffc); 
   transition: width 0.25s ease;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .nav__link:hover {
-  color: #552dfc; 
+  color: #7517f9; 
 }
 
 .nav__link:not(.active):hover::after {
@@ -181,21 +181,25 @@
   opacity: 0.7;
 }
 
-.nav__actions .action.active {
+.nav__actions .action {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav__actions .action.active::after {
   content: "";
   position: absolute;
-  bottom: -6px; /* juste en dessous de l’icône */
+  bottom: -8px;
   left: 50%;
   transform: translateX(-50%);
-  width: 40px;         /* largeur du trait */
-  height: 3px;         /* épaisseur du trait */
-  background: linear-gradient(90deg, #6a00ff, #0099ff); /* même dégradé que le logo */
-  border-radius: 2px;  /* coins arrondis */
+  width: 36px;
+  height: 3px;
+  background: linear-gradient(90deg, #6a00ff, #0099ff);
+  border-radius: 3px;
 }
+
   
 .action svg {
   display: block;
@@ -207,12 +211,7 @@
   fill: #552dfc;
 }
 
-/* Tooltips navbar */
-.nav__actions .action {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
+
 
 .nav__actions .action .tooltip {
   position: absolute;
@@ -236,6 +235,99 @@
   opacity: 1;
   visibility: visible;
   transform: translateX(-50%) translateY(-5px); /* léger slide up */
+}
+
+
+
+
+/* ========================= */
+/*          Bannière         */
+/* ========================= */
+
+/* ---- BANNIÈRE ---- */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.hero-banner__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay sur toute la bannière */
+.hero-banner__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* texte en haut, bouton en bas */
+  padding: 50px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.hero-banner__text {
+  max-width: 45%;               /* texte reste sur la gauche */
+  height: 100%;                 /* prend toute la hauteur de l'overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;      /* centre verticalement le texte dans le bloc */
+  align-items: center;          /* centre horizontalement le texte dans son bloc */
+  text-align: center;           /* texte centré visuellement */
+  gap: 0.3em;                   /* espace entre lignes */
+}
+
+.hero-banner__text h1 {
+  font-size: 2.5rem;
+  line-height: 1.3;
+  margin: 0;
+  background: linear-gradient(45deg, #6a00ffa5, #ff9900a5, #ff0000a5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-banner__text p {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  margin-top: 3rem;
+  background: linear-gradient(45deg, #6a00ff, #ff9900, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+
+/* Bouton Découvrir en bas à droite */
+.hero-banner__btn {
+  align-self: flex-end;
+  margin: 0;
+  background: linear-gradient(90deg, #ff0000a5, #ff9900a5, #6a00ffa5);
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-banner__btn:hover,
+.hero-banner__btn:focus {
+  transform: translateY(-4px);
+  background-position: 100% 50%;
+  opacity: 0.95;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
 }
 
 
