@@ -1,9 +1,28 @@
+/* ========================= */
+/*        BASE SITE          */
+/* ========================= */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #161616; /* noir profond */
+  color: #161616;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+/*==============================
 /* ---- BARRE DE NAVIGATION ---- */
+/*===============================*/
+
 .site-nav {
   width: 100%;
   background: #000000; 
   padding: 0.6rem 0;
-  border-bottom: 1px solid #e2e2e2;
+  border-bottom: 2px solid #2f2f2f;
   box-shadow: 0 1px 2px rgba(0,0,0,0.06);
 }
 
@@ -328,6 +347,91 @@
   background-position: 100% 50%;
   opacity: 0.95;
   box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+
+
+
+
+
+
+/* ========================= */
+/*        CATÉGORIES         */
+/* ========================= */
+
+.categories {
+  max-width: 1300px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+.categories__header {
+  margin-bottom: 2rem;
+}
+
+.categories__header h2 {
+  font-size: 2rem;
+  margin: 0;
+  color: #ffffff
+}
+
+.categories__header p {
+  margin-top: 0.4rem;
+  color: #ffffffad;
+}
+
+/* Grille */
+.categories__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+/* Carte catégorie */
+.category-card {
+  position: relative;
+  height: 220px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(106, 0, 255, 0.35);
+}
+
+/* Image SANS voile */
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Titre discret en bas à gauche */
+.category-card__title {
+  position: absolute;
+  bottom: 16px;
+  left: 18px;
+  z-index: 2;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  background: linear-gradient(90deg, #ffffff, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 
