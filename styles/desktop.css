@@ -453,15 +453,16 @@ html, body {
 .articles-section__title {
   font-size: 2rem;
   color: #ffffff;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
+/* Ligne scrollable */
 .articles-row {
   display: flex;
-  flex-wrap: nowrap;      /* tout sur une ligne */
+  flex-wrap: nowrap;
   gap: 1.5rem;
-  overflow-x: auto;       /* scroll si trop large */
-  padding: 0 1rem 1rem 1rem;  /* padding à gauche pour que premier article ne touche pas bord */
+  overflow-x: auto;
+  padding: 0 1rem 1rem 1rem;
   scroll-behavior: smooth;
 }
 
@@ -480,24 +481,25 @@ html, body {
 
 /* Carte article */
 .article-card {
-  flex: 0 0 220px;       /* largeur fixe */
-  border-radius: 12px;
+  position: relative;
+  flex: 0 0 220px;
+  border-radius: 14px;
   overflow: hidden;
-  background: #1a1a1a;
+  background: #000;
   box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-  text-decoration: none;  /* supprime le soulignement du lien */
+  text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .article-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   box-shadow: 0 14px 40px rgba(106, 0, 255, 0.35);
 }
 
+/* Image NON coupée */
 .article-card img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: auto;              /* image complète visible */
   display: block;
   transition: transform 0.4s ease;
 }
@@ -506,29 +508,45 @@ html, body {
   transform: scale(1.05);
 }
 
+/* Infos SUR l’image */
 .article-info {
-  padding: 0.6rem 0.8rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.8rem 0.9rem;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.25rem;
+
+  /* VOILE SUR LE TEXTE */
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.45)
+  );
 }
 
 .article-info h3 {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   margin: 0;
   color: #ffffff;
+  font-weight: 700;
 }
 
 .article-info p {
   font-size: 0.85rem;
   margin: 0;
-  color: #bcbcbc;
+  color: #d0d0d0;
 }
 
 .article-price {
   font-weight: 700;
+  font-size: 0.95rem;
   color: #6a00ff;
 }
+
 
 
 
